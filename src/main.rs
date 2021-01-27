@@ -64,7 +64,7 @@ fn main() -> std::io::Result<()> {
                         } else {
                             suffix
                         };
-                        let mut parts = identifier.split(".");
+                        let mut parts = identifier.split('.');
                         if let (Some(compressor), Some(pack)) = (parts.next(), parts.next()) {
                             comp_name = if let Some(crc) = parts.next() {
                                 if crc == "crc" {
@@ -82,7 +82,7 @@ fn main() -> std::io::Result<()> {
                     if let Some(pos) = line.find(TIME_PREFIX) {
                         let suffix = &line[(pos + TIME_PREFIX.len())..];
                         let comp = get_compressor(&mut compressions, comp_name.as_ref().unwrap());
-                        let mut parts = suffix.split(" ");
+                        let mut parts = suffix.split(' ');
                         let time = parts.nth(2).unwrap();
                         let unit = parts.next().unwrap();
                         let time_unit = format!("{} {}", time, unit);
