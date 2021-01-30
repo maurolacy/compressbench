@@ -22,7 +22,7 @@ do
 	[ -n "$SZ" ] && C=`echo -e "scale=3\n$SZ/$USZ" | bc -l`
 
 	echo "$L,$C,$NS"
-done <"$BENCH_RESULTS/benches.csv" | sort -t, -nk5
+done <"$BENCH_RESULTS/benches.csv" | sort -t, -gk5
 ) | tee "$BENCH_RESULTS/benches-2.csv"
 mv "$BENCH_RESULTS/benches-2.csv" "$BENCH_RESULTS/benches.csv"
 

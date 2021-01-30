@@ -1,7 +1,6 @@
 bench,time,size,compression_ratio,ns
 compression/lz4_flex.unpack,5.8115 ns,,NA,5.8115
 compression/lzzzz.unpack,7.3390 ns,,NA,7.3390
-compression/lzma-rs/2.unpack,501.74 us,,NA,501740.00
 compression/zstd-level-9.unpack,53.171 us,,NA,53171.000
 compression/zstd-level-8.unpack,55.482 us,,NA,55482.000
 compression/zstd-level-7.unpack,57.484 us,,NA,57484.000
@@ -11,13 +10,10 @@ compression/zstd-level-5.unpack,71.419 us,,NA,71419.000
 compression/zstd-level-4.unpack,72.170 us,,NA,72170.000
 compression/zstd-level-3.unpack,72.422 us,,NA,72422.000
 compression/zstd-level-2.unpack,74.352 us,,NA,74352.000
+compression/lzma-rs/2.unpack,501.74 us,,NA,501740.00
 compression/lzma-rs/xz.unpack,814.21 us,,NA,814210.00
 compression/zip.unpack,1.1954 ms,,NA,1195400.0000
-compression/deflate-Best.unpack,18.519 ms,,NA,18519000.000
-compression/deflate-Default.unpack,19.197 ms,,NA,19197000.000
-compression/lzma-rs.unpack,210.45 ms,,NA,210450000.00
 compression/snap.unpack,2.1702 ms,,NA,2170200.0000
-compression/deflate-Fast.unpack,24.436 ms,,NA,24436000.000
 compression/snappy-framed.unpack.nocrc,2.6818 ms,,NA,2681800.0000
 compression/yazi-BestSize.unpack,3.1504 ms,,NA,3150400.0000
 compression/yazi-Default.unpack,3.2946 ms,,NA,3294600.0000
@@ -34,3 +30,7 @@ compression/flate2-2.unpack,7.1148 ms,,NA,7114800.0000
 compression/brotli.unpack,7.2828 ms,,NA,7282800.0000
 compression/flate2-1.unpack,7.6414 ms,,NA,7641400.0000
 compression/snappy-framed.unpack.crc,9.5301 ms,,NA,9530100.0000
+compression/deflate-Best.unpack,18.519 ms,,NA,18519000.000
+compression/deflate-Default.unpack,19.197 ms,,NA,19197000.000
+compression/deflate-Fast.unpack,24.436 ms,,NA,24436000.000
+compression/lzma-rs.unpack,210.45 ms,,NA,210450000.00
