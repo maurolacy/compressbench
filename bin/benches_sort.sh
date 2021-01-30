@@ -7,7 +7,7 @@ BENCH_RESULTS="$BASE/benchresults"
 egrep '(^compression\b|\btime:|\bbytes\b|^Benchmarking\b)' "$BENCH_RESULTS/benches.txt" | grep -v '^uncompressed:' | sed 's/^Benchmarking\b.*//' | sed '/^compression\b/{N;N;s/\n/ /g}' | grep -v '^$' | awk '{print $1","$5" "$6","$10}' >"$BENCH_RESULTS/benches.csv"
 
 # Uncompressed file size
-USZ=`grep '^uncompressed:' benchresults/benches.txt | cut -d\  -f2`
+USZ=`grep '^uncompressed:' "$BENCH_RESULTS/benches.txt" | cut -d\  -f2`
 
 (
 echo "bench,time,size,compression_ratio,ns"
