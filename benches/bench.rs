@@ -44,7 +44,7 @@ fn compare_compress(c: &mut Criterion) {
             lz4_flex::decompress_into(black_box(&compressed), black_box(&mut unpacked))
         })
     });
-    group.bench_function("lz_fear.pack", |b| {
+    group.bench_function("lz-fear.pack", |b| {
         let lzfear = lz_fear::CompressionSettings::default();
         let orig = &uncompressed[..];
         b.iter(|| {
@@ -52,8 +52,8 @@ fn compare_compress(c: &mut Criterion) {
             lzfear.compress(black_box(orig), black_box(&mut compressed))
         })
     });
-    println!("lz_fear: {} bytes", compressed.len());
-    group.bench_function("lz_fear.unpack", |b| {
+    println!("lz-fear: {} bytes", compressed.len());
+    group.bench_function("lz-fear.unpack", |b| {
         b.iter(|| {
             let mut lzfear = lz_fear::LZ4FrameReader::new(black_box(&compressed[..]))
                 .unwrap()
@@ -89,7 +89,7 @@ fn compare_compress(c: &mut Criterion) {
         compressed.clear();
         compressed.resize(orig_len * 2, 0_u8);
         let comp_len = zstd::block::compress_to_buffer(orig, &mut compressed, level).unwrap();
-        group.bench_function(&format!("zstd-level-{}.pack", level), |b| {
+        group.bench_function(&format!("zstd/level-{}.pack", level), |b| {
             b.iter(|| {
                 zstd::block::compress_to_buffer(
                     black_box(orig),
@@ -98,11 +98,11 @@ fn compare_compress(c: &mut Criterion) {
                 )
             })
         });
-        println!("zstd-level-{}: {} bytes", level, comp_len);
+        println!("zstd/level-{}: {} bytes", level, comp_len);
         unpacked.clear();
         unpacked.resize(orig_len, 0_u8);
         let comp = &compressed[..comp_len];
-        group.bench_function(&format!("zstd-level-{}.unpack", level), |b| {
+        group.bench_function(&format!("zstd/level-{}.unpack", level), |b| {
             b.iter(|| {
                 black_box(&mut unpacked).clear();
                 zstd::block::decompress_to_buffer(black_box(comp), black_box(&mut unpacked))
@@ -126,7 +126,7 @@ fn compare_compress(c: &mut Criterion) {
         let comp = &compressed[..comp_len];
         b.iter(|| snap::raw::Decoder::new().decompress(black_box(comp), black_box(&mut unpacked)))
     });
-    group.bench_function("snappy-framed.pack", |b| {
+    group.bench_function("snappy_framed.pack", |b| {
         b.iter(|| {
             black_box(&mut compressed).clear();
             let mut enc =
@@ -135,8 +135,8 @@ fn compare_compress(c: &mut Criterion) {
             enc.flush().unwrap();
         })
     });
-    println!("snappy-framed: {} bytes", compressed.len());
-    group.bench_function("snappy-framed.unpack.nocrc", |b| {
+    println!("snappy_framed: {} bytes", compressed.len());
+    group.bench_function("snappy_framed/nocrc.unpack", |b| {
         b.iter(|| {
             black_box(&mut unpacked).clear();
             let mut cursor = Cursor::new(black_box(&compressed));
@@ -147,7 +147,7 @@ fn compare_compress(c: &mut Criterion) {
             decoder.read_to_end(black_box(&mut unpacked))
         })
     });
-    group.bench_function("snappy-framed.unpack.crc", |b| {
+    group.bench_function("snappy_framed/crc.unpack", |b| {
         b.iter(|| {
             black_box(&mut unpacked).clear();
             let mut cursor = Cursor::new(&compressed);
@@ -161,7 +161,7 @@ fn compare_compress(c: &mut Criterion) {
     // deflate
     use deflate::Compression;
     for &level in &[Compression::Fast, Compression::Default, Compression::Best] {
-        group.bench_function(&format!("deflate-{:?}.pack", level), |b| {
+        group.bench_function(&format!("deflate/{:?}.pack", level), |b| {
             let orig = &uncompressed;
             b.iter(|| {
                 black_box(&mut compressed).clear();
@@ -173,13 +173,13 @@ fn compare_compress(c: &mut Criterion) {
                 compressed = black_box(encoder.finish().unwrap());
             })
         });
-        println!("deflate-{:?}: {} bytes", level, compressed.len());
-        group.bench_function(&format!("deflate-{:?}.unpack", level), |b| {
+        println!("deflate/{:?}: {} bytes", level, compressed.len());
+        group.bench_function(&format!("deflate/{:?}.unpack", level), |b| {
             b.iter(|| deflate::deflate_bytes(black_box(&compressed)))
         });
     }
     for level in flate2::Compression::fast().level()..flate2::Compression::best().level() {
-        group.bench_function(&format!("flate2-{}.pack", level), |b| {
+        group.bench_function(&format!("flate2/{}.pack", level), |b| {
             compressed.clear();
             compressed.resize(orig_len * 2, 0_u8);
             b.iter(|| {
@@ -197,8 +197,8 @@ fn compare_compress(c: &mut Criterion) {
             flate2::FlushCompress::Finish,
         )
         .unwrap();
-        println!("flate2-{}: {} bytes", level, comp.total_out());
-        group.bench_function(&format!("flate2-{}.unpack", level), |b| {
+        println!("flate2/{}: {} bytes", level, comp.total_out());
+        group.bench_function(&format!("flate2/{}.unpack", level), |b| {
             unpacked.clear();
             unpacked.resize(orig_len, 0_u8);
             let comp = &compressed[..comp_len];
@@ -217,7 +217,7 @@ fn compare_compress(c: &mut Criterion) {
         CompressionLevel::Default,
         CompressionLevel::BestSize,
     ] {
-        group.bench_function(&format!("yazi-{:?}.pack", level), |b| {
+        group.bench_function(&format!("yazi/{:?}.pack", level), |b| {
             let orig = &uncompressed[..];
             b.iter(|| {
                 black_box(&mut compressed).clear();
@@ -229,8 +229,8 @@ fn compare_compress(c: &mut Criterion) {
                 stream.finish()
             })
         });
-        println!("yazi-{:?}: {} bytes", level, compressed.len());
-        group.bench_function(&format!("yazi-{:?}.unpack", level), |b| {
+        println!("yazi/{:?}: {} bytes", level, compressed.len());
+        group.bench_function(&format!("yazi/{:?}.unpack", level), |b| {
             b.iter(|| {
                 black_box(&mut unpacked).clear();
                 let mut decoder = yazi::Decoder::new();
