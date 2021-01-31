@@ -2,3 +2,4 @@
 rust-compression-*.bench
 *.bin
 blog.txt
+.idea
