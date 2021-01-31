@@ -126,7 +126,7 @@ fn compare_compress(c: &mut Criterion) {
         let comp = &compressed[..comp_len];
         b.iter(|| snap::raw::Decoder::new().decompress(black_box(comp), black_box(&mut unpacked)))
     });
-    group.bench_function("snappy_framed.pack", |b| {
+    group.bench_function("snappy_framed/nocrc.pack", |b| {
         b.iter(|| {
             black_box(&mut compressed).clear();
             let mut enc =
@@ -135,7 +135,7 @@ fn compare_compress(c: &mut Criterion) {
             enc.flush().unwrap();
         })
     });
-    println!("snappy_framed: {} bytes", compressed.len());
+    println!("snappy_framed/nocrc: {} bytes", compressed.len());
     group.bench_function("snappy_framed/nocrc.unpack", |b| {
         b.iter(|| {
             black_box(&mut unpacked).clear();
@@ -147,6 +147,17 @@ fn compare_compress(c: &mut Criterion) {
             decoder.read_to_end(black_box(&mut unpacked))
         })
     });
+    // Same as snappy_framed/nocrc.pack (just for normalized output / reports)
+    group.bench_function("snappy_framed/crc.pack", |b| {
+        b.iter(|| {
+            black_box(&mut compressed).clear();
+            let mut enc =
+                snappy_framed::write::SnappyFramedEncoder::new(black_box(&mut compressed)).unwrap();
+            enc.write_all(black_box(orig)).unwrap();
+            enc.flush().unwrap();
+        })
+    });
+    println!("snappy_framed/crc: {} bytes", compressed.len());
     group.bench_function("snappy_framed/crc.unpack", |b| {
         b.iter(|| {
             black_box(&mut unpacked).clear();
