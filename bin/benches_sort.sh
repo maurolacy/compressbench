@@ -55,5 +55,5 @@ egrep '(^bench,|\.pack)' "$BENCH_RESULTS/benches.csv" >"$BENCH_RESULTS/benches-p
 # Total (pack+unpack)
 (
 echo "bench,pack_time,unpack_time,compression_ratio,total_quality"
-egrep -v '^(bench|compression/(tar|zopfli))\b' "$BENCH_RESULTS/benches.csv" | sort -t, -k1 | sed 'N;s/\n/,/' | awk -F, '{print $1","$2","$9","$4","($7+$14)/2.}' | sed 's/.pack,/,/' | sort -t, -grk5
+egrep -v '^bench\b' "$BENCH_RESULTS/benches.csv" | sort -t, -k1 | sed 'N;s/\n/,/' | awk -F, '{print $1","$2","$9","$4","($7+$14)/2.}' | sed 's/.pack,/,/' | sort -t, -grk5
 ) | tee "$BENCH_RESULTS/benches-total.csv"

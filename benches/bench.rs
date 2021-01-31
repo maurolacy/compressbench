@@ -302,6 +302,7 @@ fn compare_compress(c: &mut Criterion) {
         })
     });
     // Zopfli
+    /* Disabled, because no unpacking
     group.bench_function("zopfli.pack", |b| {
         b.iter(|| {
             black_box(&mut compressed).clear();
@@ -315,6 +316,7 @@ fn compare_compress(c: &mut Criterion) {
         })
     });
     println!("zopfli: {} bytes", compressed.len());
+    */
     // no decompression here
     // Brotli
     group.bench_function("brotli.pack", |b| {
@@ -335,6 +337,7 @@ fn compare_compress(c: &mut Criterion) {
         })
     });
     // tar
+    /* Disabled, because no unpacking
     group.bench_function("tar.pack", |b| {
         compressed.reserve(uncompressed.len()); // double the excitement! ;P
         b.iter(|| {
@@ -353,6 +356,7 @@ fn compare_compress(c: &mut Criterion) {
         })
     });
     println!("tar: {} bytes", compressed.len());
+    */
     // unfortunately, tar only unpacks to disk, so this result would be
     // incomparable. Perhaps in a later benchmark.
     // zip
