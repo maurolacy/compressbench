@@ -6,589 +6,710 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 uncompressed: 3207246 bytes
 Benchmarking compression/lz4-compression.pack
 Benchmarking compression/lz4-compression.pack: Warming up for 3.0000 s
-Benchmarking compression/lz4-compression.pack: Collecting 10 samples in estimated 5.2418 s (385 iterations)
+Benchmarking compression/lz4-compression.pack: Collecting 10 samples in estimated 5.5222 s (385 iterations)
 Benchmarking compression/lz4-compression.pack: Analyzing
 compression/lz4-compression.pack
-                        time:   [13.588 ms 13.594 ms 13.601 ms]
-                        change: [+0.8370% +0.9292% +1.0294%] (p = 0.00 < 0.05)
-                        Change within noise threshold.
+                        time:   [14.284 ms 14.290 ms 14.299 ms]
+                        change: [+4.9661% +5.1773% +5.4007%] (p = 0.00 < 0.05)
+                        Performance has regressed.
 Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+  1 (10.00%) high severe
 lz4-compression: 1041702 bytes
 Benchmarking compression/lz4-compression.unpack
 Benchmarking compression/lz4-compression.unpack: Warming up for 3.0000 s
-Benchmarking compression/lz4-compression.unpack: Collecting 10 samples in estimated 5.0456 s (770 iterations)
+Benchmarking compression/lz4-compression.unpack: Collecting 10 samples in estimated 5.2669 s (770 iterations)
 Benchmarking compression/lz4-compression.unpack: Analyzing
 compression/lz4-compression.unpack
-                        time:   [6.5378 ms 6.5402 ms 6.5430 ms]
-                        change: [+0.6979% +0.8523% +0.9702%] (p = 0.00 < 0.05)
-                        Change within noise threshold.
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) low mild
+                        time:   [6.8243 ms 6.8392 ms 6.8574 ms]
+                        change: [+4.3464% +4.5069% +4.6820%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) high mild
+  1 (10.00%) high severe
 Benchmarking compression/lz4_flex.pack
 Benchmarking compression/lz4_flex.pack: Warming up for 3.0000 s
-Benchmarking compression/lz4_flex.pack: Collecting 10 samples in estimated 5.1189 s (770 iterations)
+Benchmarking compression/lz4_flex.pack: Collecting 10 samples in estimated 5.3274 s (770 iterations)
 Benchmarking compression/lz4_flex.pack: Analyzing
 compression/lz4_flex.pack
-                        time:   [6.6303 ms 6.6342 ms 6.6382 ms]
-                        change: [+3.4158% +3.5105% +3.6122%] (p = 0.00 < 0.05)
+                        time:   [6.9044 ms 6.9084 ms 6.9137 ms]
+                        change: [+3.9923% +4.1717% +4.3419%] (p = 0.00 < 0.05)
                         Performance has regressed.
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
 lz4_flex: 999937 bytes
 Benchmarking compression/lz4_flex.unpack
 Benchmarking compression/lz4_flex.unpack: Warming up for 3.0000 s
-Benchmarking compression/lz4_flex.unpack: Collecting 10 samples in estimated 5.0000 s (852M iterations)
+Benchmarking compression/lz4_flex.unpack: Collecting 10 samples in estimated 5.0000 s (824M iterations)
 Benchmarking compression/lz4_flex.unpack: Analyzing
 compression/lz4_flex.unpack
-                        time:   [5.7930 ns 5.7949 ns 5.7983 ns]
-                        change: [-0.5736% -0.4348% -0.2974%] (p = 0.00 < 0.05)
-                        Change within noise threshold.
+                        time:   [6.0243 ns 6.0308 ns 6.0367 ns]
+                        change: [+3.8077% +3.9939% +4.1684%] (p = 0.00 < 0.05)
+                        Performance has regressed.
 Benchmarking compression/lz-fear.pack
 Benchmarking compression/lz-fear.pack: Warming up for 3.0000 s
-Benchmarking compression/lz-fear.pack: Collecting 10 samples in estimated 5.5341 s (385 iterations)
+Benchmarking compression/lz-fear.pack: Collecting 10 samples in estimated 5.0203 s (330 iterations)
 Benchmarking compression/lz-fear.pack: Analyzing
 compression/lz-fear.pack
-                        time:   [14.336 ms 14.342 ms 14.349 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high severe
+                        time:   [15.168 ms 15.183 ms 15.198 ms]
+                        change: [+5.7559% +5.9003% +6.0360%] (p = 0.00 < 0.05)
+                        Performance has regressed.
 lz-fear: 926506 bytes
 Benchmarking compression/lz-fear.unpack
 Benchmarking compression/lz-fear.unpack: Warming up for 3.0000 s
-Benchmarking compression/lz-fear.unpack: Collecting 10 samples in estimated 5.2801 s (770 iterations)
+Benchmarking compression/lz-fear.unpack: Collecting 10 samples in estimated 5.2754 s (715 iterations)
 Benchmarking compression/lz-fear.unpack: Analyzing
 compression/lz-fear.unpack
-                        time:   [6.8311 ms 6.8354 ms 6.8400 ms]
-Found 1 outliers among 10 measurements (10.00%)
+                        time:   [7.3647 ms 7.3792 ms 7.3998 ms]
+                        change: [+7.8678% +8.0189% +8.2194%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking compression/lzzzz/lz4.pack
+Benchmarking compression/lzzzz/lz4.pack: Warming up for 3.0000 s
+Benchmarking compression/lzzzz/lz4.pack: Collecting 10 samples in estimated 5.1220 s (1155 iterations)
+Benchmarking compression/lzzzz/lz4.pack: Analyzing
+compression/lzzzz/lz4.pack
+                        time:   [4.4328 ms 4.4362 ms 4.4386 ms]
+                        change: [-1.5099% -1.3419% -1.1618%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) low severe
+  1 (10.00%) high severe
+lzzzz/lz4: 926487 bytes
+Benchmarking compression/lzzzz/lz4.unpack
+Benchmarking compression/lzzzz/lz4.unpack: Warming up for 3.0000 s
+Benchmarking compression/lzzzz/lz4.unpack: Collecting 10 samples in estimated 5.0000 s (643M iterations)
+Benchmarking compression/lzzzz/lz4.unpack: Analyzing
+compression/lzzzz/lz4.unpack
+                        time:   [7.6204 ns 7.6337 ns 7.6432 ns]
+                        change: [-0.2702% -0.0695% +0.1309%] (p = 0.53 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 10 measurements (40.00%)
+  2 (20.00%) low mild
   1 (10.00%) high mild
-Benchmarking compression/lzzzz.pack
-Benchmarking compression/lzzzz.pack: Warming up for 3.0000 s
-Benchmarking compression/lzzzz.pack: Collecting 10 samples in estimated 5.1376 s (1210 iterations)
-Benchmarking compression/lzzzz.pack: Analyzing
-compression/lzzzz.pack  time:   [4.2391 ms 4.2411 ms 4.2437 ms]
-                        change: [+0.7360% +0.8265% +0.9013%] (p = 0.00 < 0.05)
-                        Change within noise threshold.
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
-lzzzz: 926487 bytes
-Benchmarking compression/lzzzz.unpack
-Benchmarking compression/lzzzz.unpack: Warming up for 3.0000 s
-Benchmarking compression/lzzzz.unpack: Collecting 10 samples in estimated 5.0000 s (668M iterations)
-Benchmarking compression/lzzzz.unpack: Analyzing
-compression/lzzzz.unpack
-                        time:   [7.3313 ns 7.3350 ns 7.3380 ns]
-                        change: [+0.1350% +0.3184% +0.5152%] (p = 0.00 < 0.05)
-                        Change within noise threshold.
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+  1 (10.00%) high severe
+Benchmarking compression/lzzzz/lz4_hc.pack
+Benchmarking compression/lzzzz/lz4_hc.pack: Warming up for 3.0000 s
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 7.7sor enable flat sampling.
+Benchmarking compression/lzzzz/lz4_hc.pack: Collecting 10 samples in estimated 7.6930 s (55 iterations)
+Benchmarking compression/lzzzz/lz4_hc.pack: Analyzing
+compression/lzzzz/lz4_hc.pack
+                        time:   [139.60 ms 140.12 ms 140.69 ms]
+                        change: [+562.43% +564.62% +567.03%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+lzzzz/lz4_hc: 711028 bytes
+Benchmarking compression/lzzzz/lz4_hc.unpack
+Benchmarking compression/lzzzz/lz4_hc.unpack: Warming up for 3.0000 s
+Benchmarking compression/lzzzz/lz4_hc.unpack: Collecting 10 samples in estimated 5.0000 s (640M iterations)
+Benchmarking compression/lzzzz/lz4_hc.unpack: Analyzing
+compression/lzzzz/lz4_hc.unpack
+                        time:   [7.6463 ns 7.6513 ns 7.6566 ns]
+                        change: [-0.2451% -0.1150% +0.0130%] (p = 0.12 > 0.05)
+                        No change in performance detected.
 Benchmarking compression/zstd/level-1.pack
 Benchmarking compression/zstd/level-1.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-1.pack: Collecting 10 samples in estimated 5.3350 s (715 iterations)
+Benchmarking compression/zstd/level-1.pack: Collecting 10 samples in estimated 5.1780 s (660 iterations)
 Benchmarking compression/zstd/level-1.pack: Analyzing
 compression/zstd/level-1.pack
-                        time:   [7.4238 ms 7.4269 ms 7.4304 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high severe
-zstd/level-1: 502723 bytes
-Benchmarking compression/zstd/level-1.unpack
-Benchmarking compression/zstd/level-1.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-1.unpack: Collecting 10 samples in estimated 5.0014 s (69k iterations)
-Benchmarking compression/zstd/level-1.unpack: Analyzing
-compression/zstd/level-1.unpack
-                        time:   [71.729 us 72.118 us 72.590 us]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high severe
-Benchmarking compression/zstd/level-2.pack
-Benchmarking compression/zstd/level-2.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-2.pack: Collecting 10 samples in estimated 5.0570 s (660 iterations)
-Benchmarking compression/zstd/level-2.pack: Analyzing
-compression/zstd/level-2.pack
-                        time:   [7.6599 ms 7.6618 ms 7.6642 ms]
-zstd/level-2: 493719 bytes
-Benchmarking compression/zstd/level-2.unpack
-Benchmarking compression/zstd/level-2.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-2.unpack: Collecting 10 samples in estimated 5.0011 s (67k iterations)
-Benchmarking compression/zstd/level-2.unpack: Analyzing
-compression/zstd/level-2.unpack
-                        time:   [75.018 us 75.141 us 75.330 us]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high severe
-Benchmarking compression/zstd/level-3.pack
-Benchmarking compression/zstd/level-3.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-3.pack: Collecting 10 samples in estimated 5.3241 s (550 iterations)
-Benchmarking compression/zstd/level-3.pack: Analyzing
-compression/zstd/level-3.pack
-                        time:   [9.6432 ms 9.6677 ms 9.7278 ms]
-Found 2 outliers among 10 measurements (20.00%)
-  2 (20.00%) high severe
-zstd/level-3: 483315 bytes
-Benchmarking compression/zstd/level-3.unpack
-Benchmarking compression/zstd/level-3.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-3.unpack: Collecting 10 samples in estimated 5.0018 s (69k iterations)
-Benchmarking compression/zstd/level-3.unpack: Analyzing
-compression/zstd/level-3.unpack
-                        time:   [72.912 us 72.955 us 73.001 us]
-Benchmarking compression/zstd/level-4.pack
-Benchmarking compression/zstd/level-4.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-4.pack: Collecting 10 samples in estimated 5.5134 s (550 iterations)
-Benchmarking compression/zstd/level-4.pack: Analyzing
-compression/zstd/level-4.pack
-                        time:   [10.016 ms 10.025 ms 10.037 ms]
-zstd/level-4: 481933 bytes
-Benchmarking compression/zstd/level-4.unpack
-Benchmarking compression/zstd/level-4.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-4.unpack: Collecting 10 samples in estimated 5.0025 s (69k iterations)
-Benchmarking compression/zstd/level-4.unpack: Analyzing
-compression/zstd/level-4.unpack
-                        time:   [72.343 us 72.354 us 72.375 us]
-Found 3 outliers among 10 measurements (30.00%)
-  1 (10.00%) low severe
-  2 (20.00%) high mild
-Benchmarking compression/zstd/level-5.pack
-Benchmarking compression/zstd/level-5.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-5.pack: Collecting 10 samples in estimated 5.5495 s (330 iterations)
-Benchmarking compression/zstd/level-5.pack: Analyzing
-compression/zstd/level-5.pack
-                        time:   [16.783 ms 16.800 ms 16.810 ms]
-zstd/level-5: 464012 bytes
-Benchmarking compression/zstd/level-5.unpack
-Benchmarking compression/zstd/level-5.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-5.unpack: Collecting 10 samples in estimated 5.0010 s (70k iterations)
-Benchmarking compression/zstd/level-5.unpack: Analyzing
-compression/zstd/level-5.unpack
-                        time:   [71.245 us 71.281 us 71.326 us]
+                        time:   [7.8447 ms 7.8518 ms 7.8629 ms]
+                        change: [+5.3243% +5.6260% +5.8457%] (p = 0.00 < 0.05)
+                        Performance has regressed.
 Found 2 outliers among 10 measurements (20.00%)
   1 (10.00%) low mild
   1 (10.00%) high mild
+zstd/level-1: 502723 bytes
+Benchmarking compression/zstd/level-1.unpack
+Benchmarking compression/zstd/level-1.unpack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-1.unpack: Collecting 10 samples in estimated 5.0040 s (66k iterations)
+Benchmarking compression/zstd/level-1.unpack: Analyzing
+compression/zstd/level-1.unpack
+                        time:   [75.652 us 75.725 us 75.779 us]
+                        change: [+4.8172% +5.2834% +5.6224%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) low mild
+Benchmarking compression/zstd/level-2.pack
+Benchmarking compression/zstd/level-2.pack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-2.pack: Collecting 10 samples in estimated 5.4030 s (660 iterations)
+Benchmarking compression/zstd/level-2.pack: Analyzing
+compression/zstd/level-2.pack
+                        time:   [8.1871 ms 8.1960 ms 8.2062 ms]
+                        change: [+6.8486% +7.0166% +7.2065%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+zstd/level-2: 493719 bytes
+Benchmarking compression/zstd/level-2.unpack
+Benchmarking compression/zstd/level-2.unpack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-2.unpack: Collecting 10 samples in estimated 5.0031 s (63k iterations)
+Benchmarking compression/zstd/level-2.unpack: Analyzing
+compression/zstd/level-2.unpack
+                        time:   [78.815 us 79.058 us 79.349 us]
+                        change: [+4.8668% +5.1756% +5.4737%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking compression/zstd/level-3.pack
+Benchmarking compression/zstd/level-3.pack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-3.pack: Collecting 10 samples in estimated 5.3540 s (495 iterations)
+Benchmarking compression/zstd/level-3.pack: Analyzing
+compression/zstd/level-3.pack
+                        time:   [10.772 ms 10.789 ms 10.821 ms]
+                        change: [+0.0658% +0.4885% +0.9308%] (p = 0.05 > 0.05)
+                        No change in performance detected.
+zstd/level-3: 483315 bytes
+Benchmarking compression/zstd/level-3.unpack
+Benchmarking compression/zstd/level-3.unpack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-3.unpack: Collecting 10 samples in estimated 5.0015 s (64k iterations)
+Benchmarking compression/zstd/level-3.unpack: Analyzing
+compression/zstd/level-3.unpack
+                        time:   [77.852 us 77.925 us 77.977 us]
+                        change: [+6.6744% +6.8534% +7.0665%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking compression/zstd/level-4.pack
+Benchmarking compression/zstd/level-4.pack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-4.pack: Collecting 10 samples in estimated 5.1291 s (440 iterations)
+Benchmarking compression/zstd/level-4.pack: Analyzing
+compression/zstd/level-4.pack
+                        time:   [11.697 ms 11.724 ms 11.759 ms]
+                        change: [+16.559% +16.894% +17.252%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) low severe
+  1 (10.00%) high severe
+zstd/level-4: 481933 bytes
+Benchmarking compression/zstd/level-4.unpack
+Benchmarking compression/zstd/level-4.unpack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-4.unpack: Collecting 10 samples in estimated 5.0015 s (65k iterations)
+Benchmarking compression/zstd/level-4.unpack: Analyzing
+compression/zstd/level-4.unpack
+                        time:   [74.122 us 75.054 us 76.405 us]
+                        change: [+3.6127% +4.7666% +5.5920%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 10 measurements (20.00%)
+  2 (20.00%) low severe
+Benchmarking compression/zstd/level-5.pack
+Benchmarking compression/zstd/level-5.pack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-5.pack: Collecting 10 samples in estimated 5.5485 s (330 iterations)
+Benchmarking compression/zstd/level-5.pack: Analyzing
+compression/zstd/level-5.pack
+                        time:   [16.817 ms 16.870 ms 16.919 ms]
+                        change: [+0.2414% +0.4656% +0.7138%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+zstd/level-5: 464012 bytes
+Benchmarking compression/zstd/level-5.unpack
+Benchmarking compression/zstd/level-5.unpack: Warming up for 3.0000 s
+Benchmarking compression/zstd/level-5.unpack: Collecting 10 samples in estimated 5.0026 s (69k iterations)
+Benchmarking compression/zstd/level-5.unpack: Analyzing
+compression/zstd/level-5.unpack
+                        time:   [72.217 us 72.252 us 72.283 us]
+                        change: [+1.2476% +1.3300% +1.4181%] (p = 0.00 < 0.05)
+                        Performance has regressed.
 Benchmarking compression/zstd/level-6.pack
 Benchmarking compression/zstd/level-6.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-6.pack: Collecting 10 samples in estimated 5.4022 s (275 iterations)
+Benchmarking compression/zstd/level-6.pack: Collecting 10 samples in estimated 5.4877 s (275 iterations)
 Benchmarking compression/zstd/level-6.pack: Analyzing
 compression/zstd/level-6.pack
-                        time:   [19.635 ms 19.671 ms 19.701 ms]
+                        time:   [19.922 ms 19.943 ms 19.966 ms]
+                        change: [+1.2508% +1.4584% +1.6969%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
 zstd/level-6: 457444 bytes
 Benchmarking compression/zstd/level-6.unpack
 Benchmarking compression/zstd/level-6.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-6.unpack: Collecting 10 samples in estimated 5.0036 s (74k iterations)
+Benchmarking compression/zstd/level-6.unpack: Collecting 10 samples in estimated 5.0014 s (73k iterations)
 Benchmarking compression/zstd/level-6.unpack: Analyzing
 compression/zstd/level-6.unpack
-                        time:   [67.216 us 67.260 us 67.316 us]
+                        time:   [68.280 us 68.336 us 68.375 us]
+                        change: [+1.4725% +1.5608% +1.6498%] (p = 0.00 < 0.05)
+                        Performance has regressed.
 Benchmarking compression/zstd/level-7.pack
 Benchmarking compression/zstd/level-7.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-7.pack: Collecting 10 samples in estimated 6.2020 s (220 iterations)
+Benchmarking compression/zstd/level-7.pack: Collecting 10 samples in estimated 6.3891 s (220 iterations)
 Benchmarking compression/zstd/level-7.pack: Analyzing
 compression/zstd/level-7.pack
-                        time:   [28.151 ms 28.182 ms 28.234 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high severe
+                        time:   [29.013 ms 29.044 ms 29.097 ms]
+                        change: [+1.9845% +2.7002% +3.2088%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) low mild
+  1 (10.00%) high mild
 zstd/level-7: 419632 bytes
 Benchmarking compression/zstd/level-7.unpack
 Benchmarking compression/zstd/level-7.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-7.unpack: Collecting 10 samples in estimated 5.0013 s (86k iterations)
+Benchmarking compression/zstd/level-7.unpack: Collecting 10 samples in estimated 5.0022 s (86k iterations)
 Benchmarking compression/zstd/level-7.unpack: Analyzing
 compression/zstd/level-7.unpack
-                        time:   [58.044 us 58.072 us 58.113 us]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+                        time:   [58.165 us 58.186 us 58.202 us]
+                        change: [-0.0076% +0.1158% +0.2267%] (p = 0.08 > 0.05)
+                        No change in performance detected.
 Benchmarking compression/zstd/level-8.pack
 Benchmarking compression/zstd/level-8.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-8.pack: Collecting 10 samples in estimated 5.5903 s (165 iterations)
+Benchmarking compression/zstd/level-8.pack: Collecting 10 samples in estimated 5.6182 s (165 iterations)
 Benchmarking compression/zstd/level-8.pack: Analyzing
 compression/zstd/level-8.pack
-                        time:   [33.777 ms 33.823 ms 33.861 ms]
+                        time:   [34.066 ms 34.109 ms 34.149 ms]
+                        change: [+0.6718% +0.8644% +1.0830%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
 zstd/level-8: 408464 bytes
 Benchmarking compression/zstd/level-8.unpack
 Benchmarking compression/zstd/level-8.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-8.unpack: Collecting 10 samples in estimated 5.0029 s (89k iterations)
+Benchmarking compression/zstd/level-8.unpack: Collecting 10 samples in estimated 5.0018 s (89k iterations)
 Benchmarking compression/zstd/level-8.unpack: Analyzing
 compression/zstd/level-8.unpack
-                        time:   [55.883 us 55.919 us 55.945 us]
-Found 3 outliers among 10 measurements (30.00%)
-  2 (20.00%) low mild
-  1 (10.00%) high mild
+                        time:   [55.879 us 55.929 us 55.966 us]
+                        change: [-0.0966% +0.0357% +0.1769%] (p = 0.65 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
 Benchmarking compression/zstd/level-9.pack
 Benchmarking compression/zstd/level-9.pack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-9.pack: Collecting 10 samples in estimated 5.0730 s (110 iterations)
+Benchmarking compression/zstd/level-9.pack: Collecting 10 samples in estimated 5.0953 s (110 iterations)
 Benchmarking compression/zstd/level-9.pack: Analyzing
 compression/zstd/level-9.pack
-                        time:   [46.088 ms 46.246 ms 46.414 ms]
+                        time:   [46.232 ms 46.272 ms 46.310 ms]
+                        change: [-0.1545% +0.1895% +0.5387%] (p = 0.32 > 0.05)
+                        No change in performance detected.
 Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+  1 (10.00%) high severe
 zstd/level-9: 404551 bytes
 Benchmarking compression/zstd/level-9.unpack
 Benchmarking compression/zstd/level-9.unpack: Warming up for 3.0000 s
-Benchmarking compression/zstd/level-9.unpack: Collecting 10 samples in estimated 5.0017 s (93k iterations)
+Benchmarking compression/zstd/level-9.unpack: Collecting 10 samples in estimated 5.0018 s (93k iterations)
 Benchmarking compression/zstd/level-9.unpack: Analyzing
 compression/zstd/level-9.unpack
-                        time:   [53.531 us 53.602 us 53.653 us]
-Found 2 outliers among 10 measurements (20.00%)
-  2 (20.00%) high mild
+                        time:   [53.706 us 53.730 us 53.760 us]
+                        change: [+0.0039% +0.2138% +0.3958%] (p = 0.06 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
 Benchmarking compression/snap.pack
 Benchmarking compression/snap.pack: Warming up for 3.0000 s
 Benchmarking compression/snap.pack: Collecting 10 samples in estimated 5.1650 s (1320 iterations)
 Benchmarking compression/snap.pack: Analyzing
-compression/snap.pack   time:   [3.8945 ms 4.0101 ms 4.0867 ms]
-                        change: [+0.9763% +2.3817% +4.2601%] (p = 0.00 < 0.05)
-                        Change within noise threshold.
+compression/snap.pack   time:   [3.9066 ms 3.9084 ms 3.9105 ms]
+                        change: [+1.4908% +1.6274% +1.7991%] (p = 0.00 < 0.05)
+                        Performance has regressed.
 Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+  1 (10.00%) high severe
 snap: 993450 bytes
 Benchmarking compression/snap.unpack
 Benchmarking compression/snap.unpack: Warming up for 3.0000 s
-Benchmarking compression/snap.unpack: Collecting 10 samples in estimated 5.0145 s (2255 iterations)
+Benchmarking compression/snap.unpack: Collecting 10 samples in estimated 5.0711 s (2310 iterations)
 Benchmarking compression/snap.unpack: Analyzing
-compression/snap.unpack time:   [2.2049 ms 2.2075 ms 2.2110 ms]
-                        change: [+1.3140% +1.4805% +1.6591%] (p = 0.00 < 0.05)
-                        Performance has regressed.
-Found 2 outliers among 10 measurements (20.00%)
-  2 (20.00%) high mild
+compression/snap.unpack time:   [2.1921 ms 2.1933 ms 2.1942 ms]
+                        change: [+0.8137% +0.9232% +1.0801%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
 Benchmarking compression/snappy_framed/nocrc.pack
 Benchmarking compression/snappy_framed/nocrc.pack: Warming up for 3.0000 s
-Benchmarking compression/snappy_framed/nocrc.pack: Collecting 10 samples in estimated 5.5458 s (440 iterations)
+Benchmarking compression/snappy_framed/nocrc.pack: Collecting 10 samples in estimated 5.4974 s (440 iterations)
 Benchmarking compression/snappy_framed/nocrc.pack: Analyzing
 compression/snappy_framed/nocrc.pack
-                        time:   [12.750 ms 12.868 ms 12.966 ms]
+                        time:   [12.488 ms 12.492 ms 12.496 ms]
+                        change: [-3.0000% -2.1256% -1.2079%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) low mild
 snappy_framed/nocrc: 993995 bytes
 Benchmarking compression/snappy_framed/nocrc.unpack
 Benchmarking compression/snappy_framed/nocrc.unpack: Warming up for 3.0000 s
-Benchmarking compression/snappy_framed/nocrc.unpack: Collecting 10 samples in estimated 5.1228 s (1815 iterations)
+Benchmarking compression/snappy_framed/nocrc.unpack: Collecting 10 samples in estimated 5.0442 s (1815 iterations)
 Benchmarking compression/snappy_framed/nocrc.unpack: Analyzing
 compression/snappy_framed/nocrc.unpack
-                        time:   [2.7560 ms 2.8311 ms 2.9188 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+                        time:   [2.7488 ms 2.7592 ms 2.7713 ms]
+                        change: [-3.4811% -1.9088% -0.4560%] (p = 0.03 < 0.05)
+                        Change within noise threshold.
 Benchmarking compression/snappy_framed/crc.pack
 Benchmarking compression/snappy_framed/crc.pack: Warming up for 3.0000 s
-Benchmarking compression/snappy_framed/crc.pack: Collecting 10 samples in estimated 5.5516 s (440 iterations)
+Benchmarking compression/snappy_framed/crc.pack: Collecting 10 samples in estimated 5.5025 s (440 iterations)
 Benchmarking compression/snappy_framed/crc.pack: Analyzing
 compression/snappy_framed/crc.pack
-                        time:   [12.840 ms 12.998 ms 13.239 ms]
+                        time:   [12.489 ms 12.495 ms 12.503 ms]
+                        change: [-4.5462% -2.8341% -1.2443%] (p = 0.00 < 0.05)
+                        Performance has improved.
 snappy_framed/crc: 993995 bytes
 Benchmarking compression/snappy_framed/crc.unpack
 Benchmarking compression/snappy_framed/crc.unpack: Warming up for 3.0000 s
-Benchmarking compression/snappy_framed/crc.unpack: Collecting 10 samples in estimated 5.5378 s (550 iterations)
+Benchmarking compression/snappy_framed/crc.unpack: Collecting 10 samples in estimated 5.3131 s (550 iterations)
 Benchmarking compression/snappy_framed/crc.unpack: Analyzing
 compression/snappy_framed/crc.unpack
-                        time:   [9.9602 ms 10.021 ms 10.143 ms]
-Found 2 outliers among 10 measurements (20.00%)
-  1 (10.00%) high mild
-  1 (10.00%) high severe
+                        time:   [9.6370 ms 9.6414 ms 9.6455 ms]
+                        change: [-5.0451% -4.1466% -3.4285%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Benchmarking compression/deflate/Fast.pack
 Benchmarking compression/deflate/Fast.pack: Warming up for 3.0000 s
-Benchmarking compression/deflate/Fast.pack: Collecting 10 samples in estimated 6.1810 s (220 iterations)
+Benchmarking compression/deflate/Fast.pack: Collecting 10 samples in estimated 5.8211 s (220 iterations)
 Benchmarking compression/deflate/Fast.pack: Analyzing
 compression/deflate/Fast.pack
-                        time:   [27.633 ms 27.801 ms 28.016 ms]
+                        time:   [26.290 ms 26.301 ms 26.317 ms]
+                        change: [-6.4012% -5.6011% -4.9644%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high severe
+  1 (10.00%) high mild
 deflate/Fast: 692936 bytes
 Benchmarking compression/deflate/Fast.unpack
 Benchmarking compression/deflate/Fast.unpack: Warming up for 3.0000 s
-Benchmarking compression/deflate/Fast.unpack: Collecting 10 samples in estimated 5.3597 s (220 iterations)
+Benchmarking compression/deflate/Fast.unpack: Collecting 10 samples in estimated 5.0899 s (220 iterations)
 Benchmarking compression/deflate/Fast.unpack: Analyzing
 compression/deflate/Fast.unpack
-                        time:   [24.397 ms 24.478 ms 24.650 ms]
+                        time:   [23.116 ms 23.125 ms 23.134 ms]
+                        change: [-6.3924% -5.7920% -5.2290%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Benchmarking compression/deflate/Default.pack
 Benchmarking compression/deflate/Default.pack: Warming up for 3.0000 s
 
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 9.3sor enable flat sampling.
-Benchmarking compression/deflate/Default.pack: Collecting 10 samples in estimated 9.2776 s (55 iterations)
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 9.0sor enable flat sampling.
+Benchmarking compression/deflate/Default.pack: Collecting 10 samples in estimated 8.9571 s (55 iterations)
 Benchmarking compression/deflate/Default.pack: Analyzing
 compression/deflate/Default.pack
-                        time:   [168.20 ms 168.40 ms 168.57 ms]
+                        time:   [162.67 ms 162.71 ms 162.75 ms]
+                        change: [-3.4709% -3.3506% -3.2283%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) low severe
+  1 (10.00%) high severe
 deflate/Default: 510688 bytes
 Benchmarking compression/deflate/Default.unpack
 Benchmarking compression/deflate/Default.unpack: Warming up for 3.0000 s
-Benchmarking compression/deflate/Default.unpack: Collecting 10 samples in estimated 5.2794 s (275 iterations)
+Benchmarking compression/deflate/Default.unpack: Collecting 10 samples in estimated 5.0086 s (275 iterations)
 Benchmarking compression/deflate/Default.unpack: Analyzing
 compression/deflate/Default.unpack
-                        time:   [19.003 ms 19.017 ms 19.033 ms]
+                        time:   [18.125 ms 18.171 ms 18.241 ms]
+                        change: [-4.5730% -4.3471% -4.1502%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Benchmarking compression/deflate/Best.pack
 Benchmarking compression/deflate/Best.pack: Warming up for 3.0000 s
 
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 10.1s.
-Benchmarking compression/deflate/Best.pack: Collecting 10 samples in estimated 10.117 s (10 iterations)
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 9.6s.
+Benchmarking compression/deflate/Best.pack: Collecting 10 samples in estimated 9.6245 s (10 iterations)
 Benchmarking compression/deflate/Best.pack: Analyzing
 compression/deflate/Best.pack
-                        time:   [1.0115 s 1.0126 s 1.0136 s]
+                        time:   [961.68 ms 961.91 ms 962.20 ms]
+                        change: [-5.1030% -5.0080% -4.9001%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
 deflate/Best: 498054 bytes
 Benchmarking compression/deflate/Best.unpack
 Benchmarking compression/deflate/Best.unpack: Warming up for 3.0000 s
-Benchmarking compression/deflate/Best.unpack: Collecting 10 samples in estimated 5.0989 s (275 iterations)
+Benchmarking compression/deflate/Best.unpack: Collecting 10 samples in estimated 5.8299 s (330 iterations)
 Benchmarking compression/deflate/Best.unpack: Analyzing
 compression/deflate/Best.unpack
-                        time:   [18.515 ms 18.551 ms 18.580 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+                        time:   [17.632 ms 17.640 ms 17.651 ms]
+                        change: [-4.9738% -4.8327% -4.7029%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Benchmarking compression/flate2/1.pack
 Benchmarking compression/flate2/1.pack: Warming up for 3.0000 s
-Benchmarking compression/flate2/1.pack: Collecting 10 samples in estimated 5.2885 s (275 iterations)
+Benchmarking compression/flate2/1.pack: Collecting 10 samples in estimated 5.0373 s (275 iterations)
 Benchmarking compression/flate2/1.pack: Analyzing
 compression/flate2/1.pack
-                        time:   [19.155 ms 19.166 ms 19.188 ms]
+                        time:   [18.287 ms 18.297 ms 18.309 ms]
+                        change: [-4.7971% -4.6611% -4.5307%] (p = 0.00 < 0.05)
+                        Performance has improved.
 flate2/1: 705536 bytes
 Benchmarking compression/flate2/1.unpack
 Benchmarking compression/flate2/1.unpack: Warming up for 3.0000 s
-Benchmarking compression/flate2/1.unpack: Collecting 10 samples in estimated 5.3549 s (660 iterations)
+Benchmarking compression/flate2/1.unpack: Collecting 10 samples in estimated 5.1147 s (660 iterations)
 Benchmarking compression/flate2/1.unpack: Analyzing
 compression/flate2/1.unpack
-                        time:   [8.1093 ms 8.1157 ms 8.1245 ms]
+                        time:   [7.7410 ms 7.7445 ms 7.7482 ms]
+                        change: [-4.7585% -4.6552% -4.5541%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Benchmarking compression/flate2/2.pack
 Benchmarking compression/flate2/2.pack: Warming up for 3.0000 s
-Benchmarking compression/flate2/2.pack: Collecting 10 samples in estimated 6.5304 s (220 iterations)
+Benchmarking compression/flate2/2.pack: Collecting 10 samples in estimated 6.4509 s (220 iterations)
 Benchmarking compression/flate2/2.pack: Analyzing
 compression/flate2/2.pack
-                        time:   [29.656 ms 29.684 ms 29.703 ms]
+                        time:   [29.249 ms 29.261 ms 29.270 ms]
+                        change: [-1.4314% -1.3170% -1.1857%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) low mild
+  1 (10.00%) high severe
 flate2/2: 619885 bytes
 Benchmarking compression/flate2/2.unpack
 Benchmarking compression/flate2/2.unpack: Warming up for 3.0000 s
-Benchmarking compression/flate2/2.unpack: Collecting 10 samples in estimated 5.0507 s (660 iterations)
+Benchmarking compression/flate2/2.unpack: Collecting 10 samples in estimated 5.1789 s (715 iterations)
 Benchmarking compression/flate2/2.unpack: Analyzing
 compression/flate2/2.unpack
-                        time:   [7.6333 ms 7.6411 ms 7.6498 ms]
+                        time:   [7.2122 ms 7.2150 ms 7.2178 ms]
+                        change: [-5.6467% -5.5579% -5.4686%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
 Benchmarking compression/flate2/3.pack
 Benchmarking compression/flate2/3.pack: Warming up for 3.0000 s
-Benchmarking compression/flate2/3.pack: Collecting 10 samples in estimated 7.0607 s (165 iterations)
+Benchmarking compression/flate2/3.pack: Collecting 10 samples in estimated 6.9890 s (165 iterations)
 Benchmarking compression/flate2/3.pack: Analyzing
 compression/flate2/3.pack
-                        time:   [42.584 ms 42.608 ms 42.647 ms]
+                        time:   [42.320 ms 42.333 ms 42.347 ms]
+                        change: [-0.7935% -0.6874% -0.5987%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
 Found 1 outliers among 10 measurements (10.00%)
   1 (10.00%) high mild
 flate2/3: 549306 bytes
 Benchmarking compression/flate2/3.unpack
 Benchmarking compression/flate2/3.unpack: Warming up for 3.0000 s
-Benchmarking compression/flate2/3.unpack: Collecting 10 samples in estimated 5.0827 s (770 iterations)
+Benchmarking compression/flate2/3.unpack: Collecting 10 samples in estimated 5.1860 s (825 iterations)
 Benchmarking compression/flate2/3.unpack: Analyzing
 compression/flate2/3.unpack
-                        time:   [6.5813 ms 6.5849 ms 6.5882 ms]
-Found 2 outliers among 10 measurements (20.00%)
-  1 (10.00%) low mild
-  1 (10.00%) high mild
+                        time:   [6.2813 ms 6.2827 ms 6.2851 ms]
+                        change: [-4.6875% -4.5911% -4.5031%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Benchmarking compression/flate2/4.pack
 Benchmarking compression/flate2/4.pack: Warming up for 3.0000 s
-Benchmarking compression/flate2/4.pack: Collecting 10 samples in estimated 5.0881 s (110 iterations)
+Benchmarking compression/flate2/4.pack: Collecting 10 samples in estimated 5.0004 s (110 iterations)
 Benchmarking compression/flate2/4.pack: Analyzing
 compression/flate2/4.pack
-                        time:   [46.295 ms 46.348 ms 46.447 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high severe
+                        time:   [45.262 ms 45.365 ms 45.519 ms]
+                        change: [-2.1725% -1.9366% -1.7294%] (p = 0.00 < 0.05)
+                        Performance has improved.
 flate2/4: 546679 bytes
 Benchmarking compression/flate2/4.unpack
 Benchmarking compression/flate2/4.unpack: Warming up for 3.0000 s
-Benchmarking compression/flate2/4.unpack: Collecting 10 samples in estimated 5.2627 s (825 iterations)
+Benchmarking compression/flate2/4.unpack: Collecting 10 samples in estimated 5.0413 s (825 iterations)
 Benchmarking compression/flate2/4.unpack: Analyzing
 compression/flate2/4.unpack
-                        time:   [6.3657 ms 6.3681 ms 6.3721 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+                        time:   [6.1054 ms 6.1074 ms 6.1105 ms]
+                        change: [-4.2332% -4.1345% -4.0444%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Benchmarking compression/flate2/5.pack
 Benchmarking compression/flate2/5.pack: Warming up for 3.0000 s
-Benchmarking compression/flate2/5.pack: Collecting 10 samples in estimated 6.4284 s (110 iterations)
+Benchmarking compression/flate2/5.pack: Collecting 10 samples in estimated 6.4055 s (110 iterations)
 Benchmarking compression/flate2/5.pack: Analyzing
 compression/flate2/5.pack
-                        time:   [58.201 ms 58.243 ms 58.307 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+                        time:   [58.113 ms 58.143 ms 58.173 ms]
+                        change: [-0.4352% -0.2763% -0.1383%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
 flate2/5: 531571 bytes
 Benchmarking compression/flate2/5.unpack
 Benchmarking compression/flate2/5.unpack: Warming up for 3.0000 s
-Benchmarking compression/flate2/5.unpack: Collecting 10 samples in estimated 5.1217 s (825 iterations)
+Benchmarking compression/flate2/5.unpack: Collecting 10 samples in estimated 5.1941 s (880 iterations)
 Benchmarking compression/flate2/5.unpack: Analyzing
 compression/flate2/5.unpack
-                        time:   [6.2233 ms 6.2278 ms 6.2304 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) low mild
+                        time:   [5.8921 ms 5.8945 ms 5.8979 ms]
+                        change: [-5.3966% -5.3092% -5.2131%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 3 outliers among 10 measurements (30.00%)
+  2 (20.00%) low mild
+  1 (10.00%) high mild
 Benchmarking compression/flate2/6.pack
 Benchmarking compression/flate2/6.pack: Warming up for 3.0000 s
 
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 6.5sor enable flat sampling.
-Benchmarking compression/flate2/6.pack: Collecting 10 samples in estimated 6.5355 s (55 iterations)
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 7.1sor enable flat sampling.
+Benchmarking compression/flate2/6.pack: Collecting 10 samples in estimated 7.0521 s (55 iterations)
 Benchmarking compression/flate2/6.pack: Analyzing
 compression/flate2/6.pack
-                        time:   [118.47 ms 118.54 ms 118.61 ms]
+                        time:   [127.54 ms 127.58 ms 127.60 ms]
+                        change: [+7.5063% +7.5878% +7.6656%] (p = 0.00 < 0.05)
+                        Performance has regressed.
 flate2/6: 511734 bytes
 Benchmarking compression/flate2/6.unpack
 Benchmarking compression/flate2/6.unpack: Warming up for 3.0000 s
-Benchmarking compression/flate2/6.unpack: Collecting 10 samples in estimated 5.1181 s (880 iterations)
+Benchmarking compression/flate2/6.unpack: Collecting 10 samples in estimated 5.2230 s (935 iterations)
 Benchmarking compression/flate2/6.unpack: Analyzing
 compression/flate2/6.unpack
-                        time:   [5.7959 ms 5.8003 ms 5.8043 ms]
-Benchmarking compression/flate2/7.pack
-Benchmarking compression/flate2/7.pack: Warming up for 3.0000 s
-
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 9.7sor enable flat sampling.
-Benchmarking compression/flate2/7.pack: Collecting 10 samples in estimated 9.7226 s (55 iterations)
-Benchmarking compression/flate2/7.pack: Analyzing
-compression/flate2/7.pack
-                        time:   [176.29 ms 176.40 ms 176.63 ms]
+                        time:   [5.5678 ms 5.5693 ms 5.5707 ms]
+                        change: [-4.0997% -4.0115% -3.9244%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Found 1 outliers among 10 measurements (10.00%)
   1 (10.00%) high mild
+Benchmarking compression/flate2/7.pack
+Benchmarking compression/flate2/7.pack: Warming up for 3.0000 s
+Benchmarking compression/flate2/7.pack: Collecting 10 samples in estimated 5.9384 s (30 iterations)
+Benchmarking compression/flate2/7.pack: Analyzing
+compression/flate2/7.pack
+                        time:   [197.54 ms 197.60 ms 197.68 ms]
+                        change: [+11.733% +11.886% +12.019%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
 flate2/7: 505345 bytes
 Benchmarking compression/flate2/7.unpack
 Benchmarking compression/flate2/7.unpack: Warming up for 3.0000 s
-Benchmarking compression/flate2/7.unpack: Collecting 10 samples in estimated 5.0312 s (880 iterations)
+Benchmarking compression/flate2/7.unpack: Collecting 10 samples in estimated 5.1291 s (935 iterations)
 Benchmarking compression/flate2/7.unpack: Analyzing
 compression/flate2/7.unpack
-                        time:   [5.7109 ms 5.7143 ms 5.7206 ms]
+                        time:   [5.4791 ms 5.4819 ms 5.4855 ms]
+                        change: [-4.2805% -4.1167% -3.9801%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Found 1 outliers among 10 measurements (10.00%)
   1 (10.00%) high mild
 Benchmarking compression/flate2/8.pack
 Benchmarking compression/flate2/8.pack: Warming up for 3.0000 s
-Benchmarking compression/flate2/8.pack: Collecting 10 samples in estimated 5.4246 s (20 iterations)
+Benchmarking compression/flate2/8.pack: Collecting 10 samples in estimated 6.1753 s (20 iterations)
 Benchmarking compression/flate2/8.pack: Analyzing
 compression/flate2/8.pack
-                        time:   [271.26 ms 271.40 ms 271.55 ms]
+                        time:   [308.27 ms 308.40 ms 308.54 ms]
+                        change: [+13.554% +13.632% +13.712%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
 flate2/8: 501494 bytes
 Benchmarking compression/flate2/8.unpack
 Benchmarking compression/flate2/8.unpack: Warming up for 3.0000 s
-Benchmarking compression/flate2/8.unpack: Collecting 10 samples in estimated 5.2772 s (935 iterations)
+Benchmarking compression/flate2/8.unpack: Collecting 10 samples in estimated 5.0919 s (935 iterations)
 Benchmarking compression/flate2/8.unpack: Analyzing
 compression/flate2/8.unpack
-                        time:   [5.6419 ms 5.6533 ms 5.6633 ms]
+                        time:   [5.4373 ms 5.4400 ms 5.4423 ms]
+                        change: [-3.8365% -3.6223% -3.3917%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) low mild
+  1 (10.00%) high severe
 Benchmarking compression/yazi/BestSpeed.pack
 Benchmarking compression/yazi/BestSpeed.pack: Warming up for 3.0000 s
-Benchmarking compression/yazi/BestSpeed.pack: Collecting 10 samples in estimated 6.1493 s (220 iterations)
+Benchmarking compression/yazi/BestSpeed.pack: Collecting 10 samples in estimated 5.7989 s (220 iterations)
 Benchmarking compression/yazi/BestSpeed.pack: Analyzing
 compression/yazi/BestSpeed.pack
-                        time:   [27.435 ms 27.648 ms 27.862 ms]
+                        time:   [26.193 ms 26.249 ms 26.330 ms]
+                        change: [-5.3048% -4.7413% -4.2125%] (p = 0.00 < 0.05)
+                        Performance has improved.
 yazi/BestSpeed: 691183 bytes
 Benchmarking compression/yazi/BestSpeed.unpack
 Benchmarking compression/yazi/BestSpeed.unpack: Warming up for 3.0000 s
-Benchmarking compression/yazi/BestSpeed.unpack: Collecting 10 samples in estimated 5.0974 s (990 iterations)
+Benchmarking compression/yazi/BestSpeed.unpack: Collecting 10 samples in estimated 5.2110 s (1045 iterations)
 Benchmarking compression/yazi/BestSpeed.unpack: Analyzing
 compression/yazi/BestSpeed.unpack
-                        time:   [5.0953 ms 5.1146 ms 5.1352 ms]
-Found 2 outliers among 10 measurements (20.00%)
-  1 (10.00%) low severe
+                        time:   [4.9284 ms 4.9316 ms 4.9338 ms]
+                        change: [-4.1526% -3.7695% -3.3573%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 10 measurements (10.00%)
   1 (10.00%) high severe
 Benchmarking compression/yazi/Default.pack
 Benchmarking compression/yazi/Default.pack: Warming up for 3.0000 s
 
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 6.5sor enable flat sampling.
-Benchmarking compression/yazi/Default.pack: Collecting 10 samples in estimated 6.4765 s (55 iterations)
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 6.2sor enable flat sampling.
+Benchmarking compression/yazi/Default.pack: Collecting 10 samples in estimated 6.2234 s (55 iterations)
 Benchmarking compression/yazi/Default.pack: Analyzing
 compression/yazi/Default.pack
-                        time:   [117.14 ms 117.70 ms 118.06 ms]
+                        time:   [112.97 ms 113.01 ms 113.06 ms]
+                        change: [-4.0296% -3.7382% -3.4410%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 10 measurements (20.00%)
+  2 (20.00%) high mild
 yazi/Default: 511734 bytes
 Benchmarking compression/yazi/Default.unpack
 Benchmarking compression/yazi/Default.unpack: Warming up for 3.0000 s
-Benchmarking compression/yazi/Default.unpack: Collecting 10 samples in estimated 5.1213 s (1540 iterations)
+Benchmarking compression/yazi/Default.unpack: Collecting 10 samples in estimated 5.0011 s (1540 iterations)
 Benchmarking compression/yazi/Default.unpack: Analyzing
 compression/yazi/Default.unpack
-                        time:   [3.3305 ms 3.3532 ms 3.3892 ms]
+                        time:   [3.2013 ms 3.2027 ms 3.2041 ms]
+                        change: [-5.1298% -4.0904% -3.3393%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Found 1 outliers among 10 measurements (10.00%)
   1 (10.00%) high severe
 Benchmarking compression/yazi/BestSize.pack
 Benchmarking compression/yazi/BestSize.pack: Warming up for 3.0000 s
-Benchmarking compression/yazi/BestSize.pack: Collecting 10 samples in estimated 7.0512 s (20 iterations)
+Benchmarking compression/yazi/BestSize.pack: Collecting 10 samples in estimated 6.7866 s (20 iterations)
 Benchmarking compression/yazi/BestSize.pack: Analyzing
 compression/yazi/BestSize.pack
-                        time:   [353.00 ms 353.22 ms 353.40 ms]
-Found 2 outliers among 10 measurements (20.00%)
-  2 (20.00%) low mild
+                        time:   [337.84 ms 337.95 ms 338.07 ms]
+                        change: [-4.3800% -4.3213% -4.2538%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
 yazi/BestSize: 500247 bytes
 Benchmarking compression/yazi/BestSize.unpack
 Benchmarking compression/yazi/BestSize.unpack: Warming up for 3.0000 s
-Benchmarking compression/yazi/BestSize.unpack: Collecting 10 samples in estimated 5.1226 s (1595 iterations)
+Benchmarking compression/yazi/BestSize.unpack: Collecting 10 samples in estimated 5.1474 s (1650 iterations)
 Benchmarking compression/yazi/BestSize.unpack: Analyzing
 compression/yazi/BestSize.unpack
-                        time:   [3.1975 ms 3.1996 ms 3.2015 ms]
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+                        time:   [3.0741 ms 3.0767 ms 3.0797 ms]
+                        change: [-3.9894% -3.8604% -3.7430%] (p = 0.00 < 0.05)
+                        Performance has improved.
 Benchmarking compression/lzma-rs.pack
 Benchmarking compression/lzma-rs.pack: Warming up for 3.0000 s
 
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 7.0sor enable flat sampling.
-Benchmarking compression/lzma-rs.pack: Collecting 10 samples in estimated 7.0184 s (55 iterations)
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 6.8sor enable flat sampling.
+Benchmarking compression/lzma-rs.pack: Collecting 10 samples in estimated 6.7771 s (55 iterations)
 Benchmarking compression/lzma-rs.pack: Analyzing
 compression/lzma-rs.pack
-                        time:   [127.99 ms 128.82 ms 130.40 ms]
-                        change: [+30.068% +31.193% +32.611%] (p = 0.00 < 0.05)
+                        time:   [122.97 ms 123.05 ms 123.13 ms]
+                        change: [+25.073% +25.168% +25.268%] (p = 0.00 < 0.05)
                         Performance has regressed.
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
 lzma-rs: 1131078 bytes
 Benchmarking compression/lzma-rs.unpack
 Benchmarking compression/lzma-rs.unpack: Warming up for 3.0000 s
-Benchmarking compression/lzma-rs.unpack: Collecting 10 samples in estimated 6.8425 s (30 iterations)
+Benchmarking compression/lzma-rs.unpack: Collecting 10 samples in estimated 6.5482 s (30 iterations)
 Benchmarking compression/lzma-rs.unpack: Analyzing
 compression/lzma-rs.unpack
-                        time:   [227.86 ms 228.05 ms 228.29 ms]
-                        change: [+8.3273% +8.4387% +8.5720%] (p = 0.00 < 0.05)
+                        time:   [217.40 ms 217.52 ms 217.64 ms]
+                        change: [+3.3539% +3.4315% +3.5127%] (p = 0.00 < 0.05)
                         Performance has regressed.
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
 Benchmarking compression/lzma-rs/2.pack
 Benchmarking compression/lzma-rs/2.pack: Warming up for 3.0000 s
-Benchmarking compression/lzma-rs/2.pack: Collecting 10 samples in estimated 5.0014 s (14k iterations)
+Benchmarking compression/lzma-rs/2.pack: Collecting 10 samples in estimated 5.0115 s (16k iterations)
 Benchmarking compression/lzma-rs/2.pack: Analyzing
 compression/lzma-rs/2.pack
-                        time:   [348.79 us 354.98 us 365.37 us]
-                        change: [+15.456% +17.710% +19.908%] (p = 0.00 < 0.05)
+                        time:   [312.95 us 313.08 us 313.26 us]
+                        change: [+3.1421% +3.2829% +3.4239%] (p = 0.00 < 0.05)
                         Performance has regressed.
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) low mild
+  1 (10.00%) high severe
 lzma-rs/2: 3207394 bytes
 Benchmarking compression/lzma-rs/2.unpack
 Benchmarking compression/lzma-rs/2.unpack: Warming up for 3.0000 s
-Benchmarking compression/lzma-rs/2.unpack: Collecting 10 samples in estimated 5.0087 s (8635 iterations)
+Benchmarking compression/lzma-rs/2.unpack: Collecting 10 samples in estimated 5.0245 s (8965 iterations)
 Benchmarking compression/lzma-rs/2.unpack: Analyzing
 compression/lzma-rs/2.unpack
-                        time:   [564.81 us 585.10 us 601.36 us]
-                        change: [+10.109% +13.118% +16.287%] (p = 0.00 < 0.05)
+                        time:   [559.13 us 559.61 us 560.08 us]
+                        change: [+8.6390% +8.8132% +8.9599%] (p = 0.00 < 0.05)
                         Performance has regressed.
 Benchmarking compression/lzma-rs/xz.pack
 Benchmarking compression/lzma-rs/xz.pack: Warming up for 3.0000 s
-Benchmarking compression/lzma-rs/xz.pack: Collecting 10 samples in estimated 5.0028 s (14k iterations)
+Benchmarking compression/lzma-rs/xz.pack: Collecting 10 samples in estimated 5.0134 s (16k iterations)
 Benchmarking compression/lzma-rs/xz.pack: Analyzing
 compression/lzma-rs/xz.pack
-                        time:   [361.33 us 369.87 us 375.15 us]
-                        change: [+18.317% +20.828% +23.457%] (p = 0.00 < 0.05)
+                        time:   [314.29 us 314.51 us 314.75 us]
+                        change: [+4.4626% +4.8200% +5.0761%] (p = 0.00 < 0.05)
                         Performance has regressed.
 lzma-rs/xz: 3207448 bytes
 Benchmarking compression/lzma-rs/xz.unpack
 Benchmarking compression/lzma-rs/xz.unpack: Warming up for 3.0000 s
-Benchmarking compression/lzma-rs/xz.unpack: Collecting 10 samples in estimated 5.0290 s (5280 iterations)
+Benchmarking compression/lzma-rs/xz.unpack: Collecting 10 samples in estimated 5.0079 s (5995 iterations)
 Benchmarking compression/lzma-rs/xz.unpack: Analyzing
 compression/lzma-rs/xz.unpack
-                        time:   [928.39 us 945.38 us 968.80 us]
-                        change: [+11.662% +14.314% +16.978%] (p = 0.00 < 0.05)
-                        Performance has regressed.
+                        time:   [832.59 us 833.32 us 834.18 us]
+                        change: [-0.2365% +0.0760% +0.5153%] (p = 0.79 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
 Benchmarking compression/brotli.pack
 Benchmarking compression/brotli.pack: Warming up for 3.0000 s
 
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 83.3s.
-Benchmarking compression/brotli.pack: Collecting 10 samples in estimated 83.310 s (10 iterations)
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 77.1s.
+Benchmarking compression/brotli.pack: Collecting 10 samples in estimated 77.057 s (10 iterations)
 Benchmarking compression/brotli.pack: Analyzing
-compression/brotli.pack time:   [8.1980 s 8.2218 s 8.2477 s]
-                        change: [+6.3000% +6.5919% +6.9451%] (p = 0.00 < 0.05)
-                        Performance has regressed.
+compression/brotli.pack time:   [7.7045 s 7.7066 s 7.7086 s]
+                        change: [-0.1188% -0.0876% -0.0593%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
 brotli: 301546 bytes
 Benchmarking compression/brotli.unpack
 Benchmarking compression/brotli.unpack: Warming up for 3.0000 s
-Benchmarking compression/brotli.unpack: Collecting 10 samples in estimated 5.2894 s (660 iterations)
+Benchmarking compression/brotli.unpack: Collecting 10 samples in estimated 5.3085 s (715 iterations)
 Benchmarking compression/brotli.unpack: Analyzing
 compression/brotli.unpack
-                        time:   [7.9092 ms 7.9450 ms 7.9956 ms]
-                        change: [+8.6600% +9.1711% +9.7689%] (p = 0.00 < 0.05)
+                        time:   [7.4034 ms 7.4071 ms 7.4104 ms]
+                        change: [+1.6281% +1.7910% +2.0146%] (p = 0.00 < 0.05)
                         Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
 Benchmarking compression/zip.pack
 Benchmarking compression/zip.pack: Warming up for 3.0000 s
-Benchmarking compression/zip.pack: Collecting 10 samples in estimated 5.4089 s (440 iterations)
+Benchmarking compression/zip.pack: Collecting 10 samples in estimated 5.5946 s (440 iterations)
 Benchmarking compression/zip.pack: Analyzing
-compression/zip.pack    time:   [12.267 ms 12.297 ms 12.324 ms]
-                        change: [-2.2076% -1.9726% -1.7144%] (p = 0.00 < 0.05)
-                        Performance has improved.
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
+compression/zip.pack    time:   [12.692 ms 12.696 ms 12.702 ms]
+                        change: [+0.9996% +1.0783% +1.1548%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
 zip: 55602 bytes
 Benchmarking compression/zip.unpack
 Benchmarking compression/zip.unpack: Warming up for 3.0000 s
-Benchmarking compression/zip.unpack: Collecting 10 samples in estimated 5.0395 s (3905 iterations)
+Benchmarking compression/zip.unpack: Collecting 10 samples in estimated 5.0525 s (4180 iterations)
 Benchmarking compression/zip.unpack: Analyzing
-compression/zip.unpack  time:   [1.2617 ms 1.2630 ms 1.2641 ms]
-                        change: [+5.4080% +5.6160% +5.8333%] (p = 0.00 < 0.05)
+compression/zip.unpack  time:   [1.2082 ms 1.2091 ms 1.2098 ms]
+                        change: [+1.0496% +1.1738% +1.3133%] (p = 0.00 < 0.05)
                         Performance has regressed.
-Found 2 outliers among 10 measurements (20.00%)
-  2 (20.00%) low mild
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
 

@@ -64,7 +64,7 @@ fn compare_compress(c: &mut Criterion) {
     });
     {
         use lzzzz::lz4::{compress_to_vec, decompress, ACC_LEVEL_DEFAULT};
-        group.bench_function("lzzzz.pack", |b| {
+        group.bench_function("lzzzz/lz4.pack", |b| {
             let orig = &uncompressed[..];
             b.iter(|| {
                 black_box(&mut compressed).clear();
@@ -75,8 +75,28 @@ fn compare_compress(c: &mut Criterion) {
                 )
             })
         });
-        println!("lzzzz: {} bytes", compressed.len());
-        group.bench_function("lzzzz.unpack", |b| {
+        println!("lzzzz/lz4: {} bytes", compressed.len());
+        group.bench_function("lzzzz/lz4.unpack", |b| {
+            b.iter(|| {
+                black_box(&mut unpacked).clear();
+                decompress(black_box(&compressed), black_box(&mut unpacked))
+            })
+        });
+        use lzzzz::lz4_hc::{compress_to_vec as lz4_hc_compress_to_vec, CLEVEL_DEFAULT};
+        group.bench_function("lzzzz/lz4_hc.pack", |b| {
+            let orig = &uncompressed[..];
+            b.iter(|| {
+                black_box(&mut compressed).clear();
+                lz4_hc_compress_to_vec(
+                    black_box(orig),
+                    black_box(&mut compressed),
+                    CLEVEL_DEFAULT,
+                )
+            })
+        });
+        println!("lzzzz/lz4_hc: {} bytes", compressed.len());
+        // Same as lzzzz/lz4.unpack (just for normalized output / reports)
+        group.bench_function("lzzzz/lz4_hc.unpack", |b| {
             b.iter(|| {
                 black_box(&mut unpacked).clear();
                 decompress(black_box(&compressed), black_box(&mut unpacked))
