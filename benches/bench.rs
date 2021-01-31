@@ -87,11 +87,7 @@ fn compare_compress(c: &mut Criterion) {
             let orig = &uncompressed[..];
             b.iter(|| {
                 black_box(&mut compressed).clear();
-                lz4_hc_compress_to_vec(
-                    black_box(orig),
-                    black_box(&mut compressed),
-                    CLEVEL_DEFAULT,
-                )
+                lz4_hc_compress_to_vec(black_box(orig), black_box(&mut compressed), CLEVEL_DEFAULT)
             })
         });
         println!("lzzzz/lz4_hc: {} bytes", compressed.len());
@@ -100,6 +96,28 @@ fn compare_compress(c: &mut Criterion) {
             b.iter(|| {
                 black_box(&mut unpacked).clear();
                 decompress(black_box(&compressed), black_box(&mut unpacked))
+            })
+        });
+        use lzzzz::lz4f::{
+            compress_to_vec as lz4f_compress_to_vec, decompress_to_vec as lz4f_decompress_to_vec,
+            Preferences,
+        };
+        group.bench_function("lzzzz/lz4f.pack", |b| {
+            let orig = &uncompressed[..];
+            b.iter(|| {
+                black_box(&mut compressed).clear();
+                lz4f_compress_to_vec(
+                    black_box(orig),
+                    black_box(&mut compressed),
+                    &Preferences::default(),
+                )
+            })
+        });
+        println!("lzzzz/lz4f: {} bytes", compressed.len());
+        group.bench_function("lzzzz/lz4f.unpack", |b| {
+            b.iter(|| {
+                black_box(&mut unpacked).clear();
+                lz4f_decompress_to_vec(black_box(&compressed), black_box(&mut unpacked))
             })
         });
     }
