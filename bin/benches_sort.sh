@@ -44,7 +44,7 @@ do
 	Q=`echo -e "scale=10\n1.-($C+$T)/$QN" | bc -l`
 
 	echo "$L,$C,$NS,$T,$Q"
-done <"$BENCH_RESULTS/benches.csv" | sort -t, -nk7
+done <"$BENCH_RESULTS/benches.csv" | sort -t, -grk7
 ) >"$BENCH_RESULTS/benches-2.csv"
 mv "$BENCH_RESULTS/benches-2.csv" "$BENCH_RESULTS/benches.csv"
 
