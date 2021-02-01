@@ -44,7 +44,7 @@ do
 	Q=`echo -e "scale=10\n1.-($C+$T)/$QN" | bc -l`
 
 	echo "$L,$C,$NS,$T,$Q"
-done <"$BENCH_RESULTS/benches.csv" | sort -t, -grk7
+done <"$BENCH_RESULTS/benches.csv" | sort -t, -nrk7
 ) >"$BENCH_RESULTS/benches-2.csv"
 mv "$BENCH_RESULTS/benches-2.csv" "$BENCH_RESULTS/benches.csv"
 
@@ -55,5 +55,5 @@ egrep '(^bench,|\.pack)' "$BENCH_RESULTS/benches.csv" >"$BENCH_RESULTS/benches-p
 # Total (pack+unpack)
 (
 echo "bench,pack_time,unpack_time,compression_ratio,total_quality"
-egrep -v '^bench\b' "$BENCH_RESULTS/benches.csv" | sort -t, -k1 | sed 'N;s/\n/,/' | awk -F, '{print $1","$2","$9","$4","($7+$14)/2.}' | sed 's/.pack,/,/' | sort -t, -grk5
+egrep -v '^bench\b' "$BENCH_RESULTS/benches.csv" | sort -t, -k1 | sed 'N;s/\n/,/' | awk -F, '{print $1","$2","$9","$4","($7+$14)/2.}' | sed 's/.pack,/,/' | sort -t, -nrk5
 ) | tee "$BENCH_RESULTS/benches-total.csv"
